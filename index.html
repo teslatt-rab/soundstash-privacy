@@ -2,68 +2,311 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SoundStash - Privacy Policy & Terms</title>
 <style>
-body{font-family:Arial,sans-serif;max-width:700px;margin:50px auto;padding:20px;color:#333;line-height:1.6}
-h1{color:#6C63FF}h2{color:#555;margin-top:25px}h3{color:#666}
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+    background: #08060F;
+    color: #e0e0e0;
+    line-height: 1.7;
+  }
+  .hero {
+    background: linear-gradient(135deg, #1a0f3d 0%, #0d0820 100%);
+    padding: 60px 20px;
+    text-align: center;
+    border-bottom: 1px solid #2a1f5e;
+  }
+  .logo {
+    width: 80px; height: 80px;
+    background: linear-gradient(135deg, #6C63FF, #03DAC6);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 36px;
+  }
+  .hero h1 {
+    font-size: 36px;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: -1px;
+  }
+  .hero p {
+    color: #9D96FF;
+    font-size: 16px;
+    margin-top: 8px;
+  }
+  .badge {
+    display: inline-block;
+    background: rgba(108,99,255,0.15);
+    color: #9D96FF;
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    margin-top: 12px;
+    border: 1px solid rgba(108,99,255,0.3);
+  }
+  .nav {
+    background: #0f0d1a;
+    padding: 16px 20px;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    border-bottom: 1px solid #1a1535;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .nav a {
+    color: #9D96FF;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 6px 16px;
+    border-radius: 20px;
+    transition: background 0.2s;
+  }
+  .nav a:hover { background: rgba(108,99,255,0.15); }
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px 80px;
+  }
+  .section {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 20px;
+    padding: 32px;
+    margin-bottom: 24px;
+  }
+  .section-title {
+    font-size: 22px;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .section-title .icon {
+    width: 40px; height: 40px;
+    border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+  }
+  .icon-purple { background: rgba(108,99,255,0.15); }
+  .icon-teal { background: rgba(3,218,198,0.15); }
+  .icon-amber { background: rgba(239,159,39,0.15); }
+  .icon-pink { background: rgba(212,83,126,0.15); }
+  h2 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #9D96FF;
+    margin: 20px 0 8px;
+  }
+  h2:first-of-type { margin-top: 0; }
+  p { color: rgba(255,255,255,0.65); font-size: 15px; margin-bottom: 12px; }
+  .highlight {
+    background: rgba(108,99,255,0.08);
+    border-left: 3px solid #6C63FF;
+    padding: 14px 18px;
+    border-radius: 0 10px 10px 0;
+    margin: 16px 0;
+    color: rgba(255,255,255,0.8);
+    font-size: 14px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin: 16px 0;
+  }
+  .card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 14px;
+    padding: 16px;
+  }
+  .card-title {
+    font-weight: 700;
+    color: #fff;
+    font-size: 14px;
+    margin-bottom: 6px;
+  }
+  .card p { font-size: 13px; margin: 0; }
+  .tag {
+    display: inline-block;
+    background: rgba(3,218,198,0.12);
+    color: #03DAC6;
+    padding: 2px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  hr {
+    border: none;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    margin: 40px 0;
+  }
+  .footer {
+    text-align: center;
+    padding: 40px 20px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    color: rgba(255,255,255,0.3);
+    font-size: 13px;
+  }
+  .footer a { color: #6C63FF; text-decoration: none; }
 </style>
 </head>
 <body>
 
-<h1>SoundStash Privacy Policy</h1>
-<p><b>Last updated: April 2026</b></p>
+<!-- Hero -->
+<div class="hero">
+  <div class="logo">🎵</div>
+  <h1>SoundStash</h1>
+  <p>Premium Offline Music Player</p>
+  <div class="badge">Legal Documents</div>
+</div>
 
-<h2>Overview</h2>
-<p>SoundStash is a 100% offline music player. We do not collect, store, transmit or share any personal data.</p>
+<!-- Nav -->
+<div class="nav">
+  <a href="#privacy">Privacy Policy</a>
+  <a href="#terms">Terms & Conditions</a>
+  <a href="#contact">Contact</a>
+</div>
 
-<h2>Permissions We Use</h2>
-<p><b>Storage:</b> To read music files on your device only. Files never leave your device.</p>
-<p><b>Foreground Service:</b> To keep music playing in the background.</p>
-<p><b>Notifications:</b> To show playback controls in your notification shade.</p>
+<div class="container">
 
-<h2>Data Storage</h2>
-<p>All data such as playlists, favorites and settings is stored locally on your device and never transmitted anywhere.</p>
+  <!-- Last Updated -->
+  <div style="text-align:center; color:rgba(255,255,255,0.3); font-size:13px; margin-bottom:32px;">
+    Last updated: April 2026
+  </div>
 
-<h2>Advertising</h2>
-<p>We use Google AdMob for ads. Google may collect data per their own privacy policy at policies.google.com/privacy</p>
+  <!-- Privacy Policy -->
+  <div id="privacy" class="section">
+    <div class="section-title">
+      <div class="icon icon-purple">🔒</div>
+      Privacy Policy
+    </div>
 
-<h2>Lyrics</h2>
-<p>When fetching lyrics, your song title and artist name are sent to lrclib.net. Lyrics are then saved offline on your device.</p>
+    <div class="highlight">
+      SoundStash is a 100% offline music player. We are committed to protecting your privacy. We do not collect, store, transmit or share any personal data.
+    </div>
 
-<h2>Contact</h2>
-<p>For any privacy questions please contact us at your app email address.</p>
+    <h2>Data We Do NOT Collect</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="card-title">❌ Personal Info</div>
+        <p>No name, email or account required</p>
+      </div>
+      <div class="card">
+        <div class="card-title">❌ Location</div>
+        <p>We never access your location</p>
+      </div>
+      <div class="card">
+        <div class="card-title">❌ Analytics</div>
+        <p>No usage tracking or analytics</p>
+      </div>
+      <div class="card">
+        <div class="card-title">❌ Music Files</div>
+        <p>Your music never leaves your device</p>
+      </div>
+    </div>
 
-<hr>
+    <h2>Permissions We Request</h2>
+    <div class="card" style="margin-bottom:10px">
+      <div class="card-title">📁 Storage Access</div>
+      <p>To scan and play music files stored on your device. Files never leave your device.</p>
+    </div>
+    <div class="card" style="margin-bottom:10px">
+      <div class="card-title">🔔 Notifications</div>
+      <p>To show music playback controls in your notification shade and lock screen.</p>
+    </div>
+    <div class="card" style="margin-bottom:10px">
+      <div class="card-title">⚙️ Foreground Service</div>
+      <p>To keep music playing when the app is in the background.</p>
+    </div>
 
-<h1 id="terms">Terms and Conditions</h1>
-<p><b>Last updated: April 2026</b></p>
+    <h2>Local Storage</h2>
+    <p>All app data including playlists, favorites, play counts, settings and lyrics is stored locally on your device using an encrypted local database. This data is never transmitted anywhere.</p>
 
-<h2>1. Acceptance</h2>
-<p>By downloading or using SoundStash, you agree to these terms.</p>
+    <h2>Third Party Services</h2>
+    <div class="card" style="margin-bottom:10px">
+      <div class="card-title">📢 Google AdMob</div>
+      <p>Used for displaying ads in the free version. Google may collect advertising data per their privacy policy at <a href="https://policies.google.com/privacy" style="color:#6C63FF">policies.google.com/privacy</a></p>
+    </div>
+    <div class="card">
+      <div class="card-title">🎤 lrclib.net</div>
+      <p>Used for fetching song lyrics. When you fetch lyrics, your song title and artist name are sent to lrclib.net. Lyrics are saved offline after the first fetch.</p>
+    </div>
+  </div>
 
-<h2>2. License</h2>
-<p>SoundStash grants you a personal, non-transferable license to use the app on your Android device.</p>
+  <!-- Terms -->
+  <div id="terms" class="section">
+    <div class="section-title">
+      <div class="icon icon-amber">⚖️</div>
+      Terms and Conditions
+    </div>
 
-<h2>3. Restrictions</h2>
-<p>You may not copy, modify, distribute, or reverse engineer the app.</p>
+    <div class="highlight">
+      By downloading, installing or using SoundStash, you agree to be bound by these Terms and Conditions.
+    </div>
 
-<h2>4. Your Content</h2>
-<p>All music files remain yours. We do not access, collect or transmit your music files.</p>
+    <h2>1. License</h2>
+    <p>SoundStash grants you a limited, personal, non-exclusive, non-transferable license to install and use the application on your Android device solely for personal, non-commercial purposes.</p>
 
-<h2>5. In-App Purchases</h2>
-<p>The Remove Ads purchase is a one-time non-refundable payment processed by Google Play.</p>
+    <h2>2. Restrictions</h2>
+    <p>You may not copy, modify, distribute, sell, reverse engineer, decompile or disassemble the application or any part of it.</p>
 
-<h2>6. Advertising</h2>
-<p>The free version displays ads via Google AdMob. Purchase Remove Ads to disable all ads.</p>
+    <h2>3. Your Content</h2>
+    <p>All music files on your device remain entirely yours. SoundStash does not claim ownership of any content you play through the app. We do not access, collect, or transmit your music files.</p>
 
-<h2>7. Disclaimer</h2>
-<p>SoundStash is provided as-is without warranty of any kind.</p>
+    <h2>4. In-App Purchases</h2>
+    <p>SoundStash offers a one-time "Remove Ads" purchase processed through Google Play. All purchases are final and non-refundable unless required by applicable law. Once purchased, the Remove Ads feature is permanently unlocked for your account.</p>
 
-<h2>8. Changes</h2>
-<p>We may update these terms at any time. Continued use means acceptance.</p>
+    <h2>5. Advertising</h2>
+    <p>The free version of SoundStash displays advertisements served by Google AdMob. By using the free version, you consent to the display of these ads. Purchase "Remove Ads" to permanently disable all advertising.</p>
 
-<h2>9. Contact</h2>
-<p>For questions contact us at your support email.</p>
+    <h2>6. Disclaimer of Warranties</h2>
+    <p>SoundStash is provided "as is" without warranty of any kind, express or implied. We do not warrant that the app will be error-free, uninterrupted, or free of viruses or other harmful components.</p>
+
+    <h2>7. Limitation of Liability</h2>
+    <p>To the maximum extent permitted by law, SoundStash and its developers shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of the app.</p>
+
+    <h2>8. Changes to Terms</h2>
+    <p>We reserve the right to modify these terms at any time. Changes will be posted on this page with an updated date. Continued use of the app after changes constitutes acceptance of the new terms.</p>
+
+    <h2>9. Governing Law</h2>
+    <p>These terms shall be governed by and construed in accordance with applicable laws. Any disputes shall be resolved through good faith negotiation.</p>
+  </div>
+
+  <!-- Contact -->
+  <div id="contact" class="section">
+    <div class="section-title">
+      <div class="icon icon-teal">✉️</div>
+      Contact Us
+    </div>
+    <p>For privacy questions, support requests, or legal inquiries regarding SoundStash, please contact us:</p>
+    <div class="card">
+      <div class="card-title">📧 Support Email</div>
+      <p>Replace with your actual support email address</p>
+    </div>
+    <p style="margin-top:16px">We aim to respond to all inquiries within 48 hours.</p>
+  </div>
+
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  <p>© 2026 SoundStash. All rights reserved.</p>
+  <p style="margin-top:8px">
+    <a href="#privacy">Privacy Policy</a> · 
+    <a href="#terms">Terms & Conditions</a>
+  </p>
+</div>
 
 </body>
 </html>
